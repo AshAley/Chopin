@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anch" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafxs" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chopin.coreUI_controller">
+   <children>
+      <ImageView fx:id="imgview" fitHeight="548.0" fitWidth="626.0" layoutX="20.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/NOimgSELECTED.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="pathtxt" layoutX="6.0" layoutY="637.0" lineSpacing="5.0" text="No image selected (use the file selector beside)" />
+      <Button layoutX="851.0" layoutY="618.0" mnemonicParsing="false" onAction="#fileselect" prefHeight="28.0" prefWidth="79.0" text="Select" />
+      <TextArea fx:id="outarea" layoutX="695.0" layoutY="11.0" prefHeight="545.0" prefWidth="488.0" text="output field (select an image with text and then click process)" />
+      <ComboBox fx:id="cmblang" layoutX="1009.0" layoutY="616.0" prefHeight="29.0" prefWidth="151.0" />
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="958.0" layoutY="586.0" onMouseClicked="#reset" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/reloadbutton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="958.0" layoutY="617.0" onMouseClicked="#process" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/process.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

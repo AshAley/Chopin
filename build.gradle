@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id "org.beryx.jlink" version '2.24.4'
+}
+group 'org.ashley'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+application{
+    mainClassName = 'chopin.Launcher'
+    mainModule.set("chopin")
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'javax.activation:activation:1.1.1'
+    implementation 'net.sourceforge.tess4j:tess4j:4.5.5'
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+
+
+}
+javafx {
+    modules = ['javafx.controls','javafx.fxml']
+}
+
+test {
+    useJUnitPlatform()
+}
+jar {
+    manifest{
+        attributes 'Main-Class' : 'chopin.Launcher'
+    }
+}
