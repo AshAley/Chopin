@@ -43,7 +43,7 @@ public class util {
 
 
     public void setImage(ImageView imgv , String path){
-        Image image = new Image("file://"+path);
+        Image image = new Image("file:"+path);écut
         imgv.setImage(image);
     }
     public String ocr(String path ,String lang) throws TesseractException {
